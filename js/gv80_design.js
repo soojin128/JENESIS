@@ -154,37 +154,41 @@ window.addEventListener("DOMContentLoaded", function () {
 
   //interiorSlide
   var slides = document.querySelector('.slides'),
-  slide = slides.querySelectorAll('li'),
-  currentIdx = 0,
-  slideCount = slide.length,
-  slideWidth = 500,
-  slideMargin = 30;
+    slide = slides.querySelectorAll('li'),
+    slideCount = slide.length,
+    slideWidth = 500,
+    slideMargin = 30;
+  var firstItemClone = slides.firstElementChild.cloneNode(true);
+  // slides.appendChild(firstItemClone);
+  
+  slides.style.width = (slideWidth + slideMargin) * slideCount - slideMargin + 'px';
 
-  slides.style.width = (slideWidth + slideMargin)*slideCount - slideMargin + 'px';
+  function moveSlide() {
+    var curIdx = 0;
 
-  function moveSlide(num){
-    slides.style.left = -num * 530 + 'px';
-    currentIdx = num;
+
+    setInterval(function () {
+      slides.style.transition = '.2s';
+      slides.style.left = -530 * (curIdx + 1) + 'px';
+      curIdx++;
+
+      if (curIdx === 5) {
+        setTimeout(function(){
+          slides.style.transition = '0s';
+          slides.style.left = 0 + 'px';
+        },200);
+        curIdx = 0;
+      }
+    }, 5000);
   }
 
-  // setInterval(function(){
+  moveSlide();
 
-  //   var nextIdx = (currentIdx+1) % slideCount;
 
-  //   moveSlide(nextIdx);
-  // },4000);
 
-  
-  var firstChild = slide[0];
-  var secondChild = slide[1];
-  var lastChild = slide[4];
-  var cloneFirst = firstChild.cloneNode(true);
-  var cloneSecond = secondChild.cloneNode(true);
-  var cloneLast = lastChild.cloneNode(true);
-  
 
-  slides.appendChild(cloneFirst);
-  slides.appendChild(cloneSecond);
+
+
 
 
 

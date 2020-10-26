@@ -346,6 +346,76 @@ main .design_spot {
   color: #fff;
 }
 
+main .design_spot .scroll_icon {
+  display: block;
+  position: relative;
+  top: -100px;
+  left: 48%;
+  height: 2.6rem;
+  width: 1.6rem;
+  border: .2rem solid #fff;
+  border-radius: 1rem;
+}
+
+main .design_spot .scroll_icon .scroll_icon_dot {
+  display: block;
+  position: absolute;
+  left: 34%;
+  background: #fff;
+  height: .4rem;
+  width: .4rem;
+  top: .5rem;
+  border-radius: 50%;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-animation: scroll 2s ease-out infinite;
+          animation: scroll 2s ease-out infinite;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: translateY(0.75rem);
+            transform: translateY(0.75rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: translateY(0.75rem);
+            transform: translateY(0.75rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0;
+  }
+}
+
 main .design_spot h2 {
   position: absolute;
   bottom: 15%;
@@ -362,6 +432,11 @@ main .design_spot p {
   left: 11%;
   font-weight: 400;
   letter-spacing: 0.05em;
+}
+
+main .design_spot p:last-child {
+  bottom: 3%;
+  left: 47.5%;
 }
 
 main .design_spot img {
@@ -466,7 +541,7 @@ main .design_main .m-4 article p {
 }
 
 main .design_main .m-3 {
-  padding-top: 100px;
+  padding-top: 200px;
   width: 90%;
   margin-left: 10%;
   display: -webkit-box;
@@ -526,8 +601,8 @@ main .interior_spot p {
 main .interior {
   background: #000;
   width: 100%;
-  height: 150vh;
-  padding: 150px 0;
+  height: 100vh;
+  padding: 100px 0;
   text-align: center;
 }
 
@@ -543,7 +618,7 @@ main .interior .slides {
   position: absolute;
   left: 0;
   top: 0;
-  width: 2620px;
+  width: 5000px;
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -556,6 +631,32 @@ main .interior .slides li:not(:last-child) {
 main .interior .slides img {
   width: 500px;
   height: 400px;
+}
+
+main .interior .indi {
+  position: relative;
+  top: 20px;
+  left: 0;
+}
+
+main .interior .indi span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 50%;
+}
+
+main .interior .indi span:nth-of-type(1) {
+  left: 48%;
+}
+
+main .interior .indi span:nth-of-type(2) {
+  left: 50%;
+}
+
+main .interior .indi span:nth-of-type(3) {
+  left: 52%;
 }
 
 main .interior a {
