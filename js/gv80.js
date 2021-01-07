@@ -1,10 +1,9 @@
 window.addEventListener("DOMContentLoaded", function () {
-
   setTimeout(function () {
     scrollTo(0, 0);
-  }, 100);
+  });
 
-  //mouseCursorCustom
+  //CursorCustom
   var mouseCursor = document.querySelector('.cursor');
   var allA = document.querySelectorAll('a');
 
@@ -89,14 +88,11 @@ window.addEventListener("DOMContentLoaded", function () {
   var body = document.querySelector('body');
 
   window.addEventListener('mousewheel', function (e) {
-    clearTimeout();
     setTimeout(function () {
       if (e.wheelDelta < 0) {
         if (this.scrollY < targetPosition) {
           window.scrollTo(0, targetPosition);
           body.style.overflow = 'auto';
-          genesisModels.style.width = '100%';
-          genesisModels.style.left = '0';
         }
       } else {
         if (this.scrollY < targetPosition) {
@@ -104,7 +100,6 @@ window.addEventListener("DOMContentLoaded", function () {
           body.style.overflow = 'hidden';
         }
       }
-      console.log(this.scrollY)
     }, 500);
 
   });
@@ -123,14 +118,10 @@ window.addEventListener("DOMContentLoaded", function () {
       if (this.scrollY > targetPosition) {
         headerDiv.style.transform = 'translateY(-100px)';
         headerDiv.style.height = '50px';
-        genesisModels.style.width = '130%';
-        genesisModels.style.left = '-15%';
-
+        // genesisModels.style.top = '50px';
       } else {
         headerDiv.style.transform = 'translateY(0)';
         headerDiv.style.height = '150px';
-        genesisModels.style.width = '100%';
-        genesisModels.style.left = '0%';
       }
     } else {
       logoImg.classList.remove('active');
@@ -139,20 +130,11 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  //models click
-
   var modelsBtn = document.querySelector('.left');
   var genesisModels = document.querySelector('.genesis_models');
-  var modelsA = genesisModels.querySelectorAll('a');
-  console.log(modelsA)
   modelsBtn.addEventListener('click', function (e) {
     e.preventDefault();
     genesisModels.classList.toggle('active');
-    modelsA.forEach(function (a) {
-      setTimeout(function(){
-        a.classList.toggle('active');
-      },200);
-    });
   });
 
 

@@ -6,7 +6,6 @@ html {
 body {
   cursor: none;
   overflow: hidden;
-  background: #151515;
 }
 
 body a {
@@ -27,7 +26,7 @@ header {
 header .cursor {
   width: 1.5rem;
   height: 1.5rem;
-  border: 2px solid #ddd;
+  border: 2px solid #ccc;
   border-radius: 50%;
   position: absolute;
   z-index: 1000;
@@ -119,50 +118,50 @@ header .header .burger p:last-child {
   display: none;
 }
 
-header .header .burger.active span:nth-of-type(1) {
+header .burger.active span:nth-of-type(1) {
   -webkit-transform: rotate(45deg) translateY(9px);
           transform: rotate(45deg) translateY(9px);
 }
 
-header .header .burger.active span:nth-of-type(2) {
+header .burger.active span:nth-of-type(2) {
   display: none;
 }
 
-header .header .burger.active span:nth-of-type(3) {
+header .burger.active span:nth-of-type(3) {
   -webkit-transform: rotate(-45deg) translateY(-10px);
           transform: rotate(-45deg) translateY(-10px);
 }
 
-header .header .burger.active p {
+header .burger.active p {
   display: none;
 }
 
-header .header .burger.active p:last-child {
+header .burger.active p:last-child {
   display: block;
 }
 
-header .header .logo {
+header .logo {
   width: 280px;
   margin: 0 auto;
 }
 
-header .header .logo a {
+header .logo a {
   position: relative;
   top: 0;
   left: 0;
 }
 
-header .header .logo a img {
+header .logo a img {
   width: 100%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-header .header .logo a img.active {
+header .logo a img.active {
   opacity: 0;
 }
 
-header .header .logo a span {
+header .logo a span {
   position: absolute;
   top: -29px;
   left: 43%;
@@ -173,17 +172,17 @@ header .header .logo a span {
   transition: 0.5s;
 }
 
-header .header .logo a span.active {
+header .logo a span.active {
   font-size: 1rem;
   left: 38%;
 }
 
-header .header .signin {
+header .signin {
   text-transform: uppercase;
   color: #fff;
 }
 
-header .header .h-bottom {
+header .h-bottom {
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -197,70 +196,82 @@ header .header .h-bottom {
   padding: 10px 0;
 }
 
-header .header .h-bottom a {
+header .h-bottom a {
   color: #fff;
   font-weight: 400;
   letter-spacing: 0.05em;
 }
 
-header .header .h-bottom .left img {
+header .h-bottom .left img {
   width: 20px;
   height: 12px;
   padding-right: 5px;
 }
 
-header .header .h-bottom nav a {
+header .h-bottom nav a {
   padding-right: 20px;
 }
 
-header .header .h-bottom nav a:last-child {
+header .h-bottom nav a:last-child {
   padding-right: 0;
 }
 
-header .header .genesis_models {
+header .genesis_models {
   position: fixed;
-  left: 10%;
-  top: 150px;
-  width: 80%;
-  height: 0;
+  left: 0;
+  top: 100%;
+  width: 10%;
+  height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #fff;
+  background: rgba(0, 0, 0, 0.25);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
   -webkit-transition: .5s;
   transition: .5s;
 }
 
-header .header .genesis_models a {
-  color: #000;
+header .genesis_models a {
+  color: #fff;
   font-weight: bold;
   text-transform: uppercase;
-  display: none;
 }
 
-header .header .genesis_models a.active {
-  display: block;
+header .genesis_models a:hover {
+  color: #777;
 }
 
-header .header .genesis_models a:hover {
-  color: #fff;
-  background: #000;
-  padding: 0 50px;
-  -webkit-transition: .5s;
-  transition: .5s;
+header .genesis_models::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 16px;
+  width: 60%;
+  height: 4px;
+  background: rgba(240, 239, 239, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
-header .header .genesis_models.active {
-  height: 30px;
+header .genesis_models.active {
+  opacity: 1;
+  visibility: visible;
 }
 
-header .menu {
+.menu {
   position: fixed;
   top: 0;
   left: 0;
@@ -289,43 +300,43 @@ header .menu {
   transition: .2s;
 }
 
-header .menu a {
+.menu a {
   color: #fff;
   -webkit-transform: translateX(-1200%);
           transform: translateX(-1200%);
 }
 
-header .menu a:nth-of-type(1) {
+.menu a:nth-of-type(1) {
   -webkit-transition: .6s;
   transition: .6s;
 }
 
-header .menu a:nth-of-type(2) {
+.menu a:nth-of-type(2) {
   -webkit-transition: .8s;
   transition: .8s;
 }
 
-header .menu a:nth-of-type(3) {
+.menu a:nth-of-type(3) {
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-header .menu a:nth-of-type(4) {
+.menu a:nth-of-type(4) {
   -webkit-transition: 1.2s;
   transition: 1.2s;
 }
 
-header .menu a:nth-of-type(5) {
+.menu a:nth-of-type(5) {
   -webkit-transition: 1.4s;
   transition: 1.4s;
 }
 
-header .menu a.active {
+.menu a.active {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-header .menu.active {
+.menu.active {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
@@ -344,6 +355,32 @@ main .design_spot {
   width: 100%;
   height: 100vh;
   color: #fff;
+}
+
+main .design_spot h2 {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  font-size: 3.8rem;
+  letter-spacing: 0.3rem;
+  font-weight: 500;
+  white-space: pre-line;
+}
+
+main .design_spot p {
+  position: absolute;
+  bottom: 45%;
+  left: 11%;
+  font-weight: 400;
+  letter-spacing: 0.05714em;
+}
+
+main .design_spot img {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  z-index: -1;
 }
 
 main .design_spot .scroll_icon {
@@ -416,41 +453,11 @@ main .design_spot .scroll_icon .scroll_icon_dot {
   }
 }
 
-main .design_spot h2 {
-  position: absolute;
-  bottom: 15%;
-  left: 10%;
-  font-size: 4rem;
-  letter-spacing: 0.3rem;
-  font-weight: 500;
-  white-space: pre-line;
-}
-
-main .design_spot p {
-  position: absolute;
-  bottom: 35%;
-  left: 11%;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-}
-
-main .design_spot p:last-child {
-  bottom: 3%;
-  left: 47.5%;
-}
-
-main .design_spot img {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  top: 0;
-  z-index: -1;
-}
-
 main .design_main {
   width: 100%;
+  height: 3000px;
   text-align: center;
-  padding: 150px 0 200px 0;
+  padding-top: 150px;
   background: #fff;
 }
 
@@ -472,20 +479,20 @@ main .design_main h2 {
 main .design_main p {
   white-space: pre-line;
   font-weight: 600;
-  letter-spacing: 0.05em;
-  line-height: 1.5;
+  letter-spacing: 0.05714em;
+  line-height: 1.57143;
 }
 
 main .design_main h4 {
   padding-top: 50px;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.125em;
   font-size: 1.5rem;
   color: #b59b62;
 }
 
 main .design_main .m-1 {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -507,60 +514,42 @@ main .design_main .m-1 img {
   padding-top: 100px;
 }
 
-main .design_main .m-2,
-main .design_main .m-4 {
-  padding-top: 200px;
+main .design_main .m-2 {
   width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding-top: 200px;
 }
 
-main .design_main .m-2 img,
-main .design_main .m-4 img {
+main .design_main .m-2 img {
+  margin-right: 10%;
+  float: left;
   width: 55%;
-  height: 400px;
 }
 
-main .design_main .m-2 article,
-main .design_main .m-4 article {
+main .design_main .m-2 article {
+  float: right;
   width: 35%;
   text-align: left;
 }
 
-main .design_main .m-2 article p,
-main .design_main .m-4 article p {
+main .design_main .m-2 article p {
   font-weight: 400;
   color: #222;
 }
 
 main .design_main .m-3 {
-  padding-top: 200px;
+  float: right;
   width: 90%;
-  margin-left: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding-top: 50px;
 }
 
 main .design_main .m-3 img {
+  margin-left: 10%;
+  float: right;
   width: 55%;
-  height: 400px;
 }
 
 main .design_main .m-3 article {
+  float: left;
   width: 35%;
   text-align: left;
 }
@@ -570,11 +559,33 @@ main .design_main .m-3 article p {
   color: #222;
 }
 
+main .design_main .m-4 {
+  width: 90%;
+  margin-top: 50px;
+}
+
+main .design_main .m-4 img {
+  margin-right: 10%;
+  float: left;
+  width: 55%;
+}
+
+main .design_main .m-4 article {
+  float: right;
+  width: 35%;
+  text-align: left;
+}
+
+main .design_main .m-4 article p {
+  font-weight: 400;
+  color: #222;
+}
+
 main .interior_spot {
   width: 100%;
   background: #000;
   text-align: center;
-  padding-top: 200px;
+  padding-top: 100px;
 }
 
 main .interior_spot img {
@@ -601,62 +612,44 @@ main .interior_spot p {
 main .interior {
   background: #000;
   width: 100%;
-  height: 100vh;
-  padding: 100px 0;
+  padding-bottom: 150px;
   text-align: center;
 }
 
-main .interior .slide_wrapper {
-  position: relative;
-  width: 1560px;
-  margin: 0 auto;
-  height: 400px;
-  overflow: hidden;
+main .interior img {
+  width: 50%;
+  height: 700px;
 }
 
-main .interior .slides {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 5000px;
-  -webkit-transition: .5s;
-  transition: .5s;
+main .interior img:nth-of-type(2) {
+  width: 20%;
+  height: 500px;
 }
 
-main .interior .slides li:not(:last-child) {
-  float: left;
-  margin-right: 30px;
+main .interior article {
+  display: inline-block;
+  vertical-align: top;
+  padding: 150px 110px 0 110px;
 }
 
-main .interior .slides img {
-  width: 500px;
-  height: 400px;
+main .interior h4 {
+  white-space: pre-line;
+  font-weight: 500;
+  letter-spacing: 0.05714em;
+  line-height: 1.6;
+  color: #b59b62;
+  font-size: 1.2rem;
 }
 
-main .interior .indi {
-  position: relative;
-  top: 20px;
-  left: 0;
+main .interior p {
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  white-space: pre-line;
 }
 
-main .interior .indi span {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #ddd;
-  border-radius: 50%;
-}
-
-main .interior .indi span:nth-of-type(1) {
-  left: 48%;
-}
-
-main .interior .indi span:nth-of-type(2) {
-  left: 50%;
-}
-
-main .interior .indi span:nth-of-type(3) {
-  left: 52%;
+main .interior p:nth-of-type(2) {
+  color: #a3a3a3;
 }
 
 main .interior a {
@@ -680,14 +673,6 @@ main .interior a:nth-of-type(2) {
   color: #91765e;
 }
 
-main .interior a:nth-of-type(2):hover {
-  color: #fff;
-}
-
-main .interior a:hover {
-  background: #b5906e;
-}
-
 main .news {
   width: 100%;
   padding-top: 200px;
@@ -701,7 +686,7 @@ main .news h2 {
   letter-spacing: 0.1em;
 }
 
-main .news .news_width {
+main .news .news-width {
   width: 80%;
   margin: 0 auto;
   display: -webkit-box;
@@ -716,36 +701,36 @@ main .news .news_width {
   padding: 100px 0 200px 0;
 }
 
-main .news .news_width div {
+main .news .news-width div {
   width: 100%;
   overflow: hidden;
 }
 
-main .news .news_width div a {
+main .news .news-width div a {
   width: 95%;
   color: #ddd;
 }
 
-main .news .news_width div a div {
+main .news .news-width div a div {
   width: 95%;
   height: 300px;
 }
 
-main .news .news_width div a div img {
+main .news .news-width div a div img {
   width: 100%;
   height: 300px;
   -webkit-transition: .5s;
   transition: .5s;
 }
 
-main .news .news_width div a article {
+main .news .news-width div a article {
   width: 95%;
   border-left: 1px solid #4e4c4c;
   padding-left: 3%;
   height: 150px;
 }
 
-main .news .news_width div a article h4 {
+main .news .news-width div a article h4 {
   height: 40%;
   padding: 24px 0 0 0;
   font-weight: 400;
@@ -758,7 +743,7 @@ main .news .news_width div a article h4 {
   overflow: hidden;
 }
 
-main .news .news_width div a article p {
+main .news .news-width div a article p {
   font-weight: 300;
   font-size: 0.9rem;
   letter-spacing: 0.05em;
@@ -770,10 +755,9 @@ main .news .news_width div a article p {
 }
 
 main .more {
-  display: inline-block;
   position: relative;
   bottom: 100px;
-  left: 46%;
+  left: 0;
   text-align: center;
   font-weight: bold;
   font-size: .9rem;
@@ -788,7 +772,7 @@ main .more img {
 }
 
 .footer {
-  background: #000;
+  background: #1b1b1b;
   width: 100%;
   padding: 80px 0;
 }
